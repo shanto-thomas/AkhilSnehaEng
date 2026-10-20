@@ -1,0 +1,105 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Cormorant Garamond", Georgia, serif;
+  --font-marcellus: "Marcellus", Georgia, serif;
+  --font-script: "Great Vibes", cursive;
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: var(--font-sans);
+  }
+}
+
+.font-script {
+  font-family: var(--font-script);
+}
+
+.font-marcellus {
+  font-family: var(--font-marcellus);
+}
+
+.font-serif-cormorant {
+  font-family: var(--font-serif);
+}
+
+/* Elegant Dusty Rose & Champagne Button Gradients (NO harsh dark red) */
+.rose-gold-gradient {
+  background: linear-gradient(135deg, #c28291 0%, #ad6b7c 50%, #8f4d5e 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.dusty-rose-bg {
+  background: linear-gradient(135deg, #bd7a8a 0%, #a86273 100%);
+}
+
+.dusty-rose-btn {
+  background-color: #b36e7f;
+  color: #ffffff;
+  transition: all 0.2s ease;
+}
+
+.dusty-rose-btn:hover {
+  background-color: #a0596b;
+}
+
+/* Drifting Cherry Blossom Petal Animation */
+@keyframes petalFall1 {
+  0% {
+    transform: translate(0, -10px) rotate(0deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translate(40px, 120px) rotate(220deg);
+    opacity: 0;
+  }
+}
+
+@keyframes petalFall2 {
+  0% {
+    transform: translate(0, -10px) rotate(20deg);
+    opacity: 0;
+  }
+  20% {
+    opacity: 0.8;
+  }
+  80% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translate(-50px, 140px) rotate(-180deg);
+    opacity: 0;
+  }
+}
+
+.animate-sakura-1 {
+  animation: petalFall1 8s ease-in-out infinite;
+}
+
+.animate-sakura-2 {
+  animation: petalFall2 10s ease-in-out infinite 2s;
+}
+
+/* Floating animation */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-4px) rotate(0.8deg);
+  }
+}
+
+.animate-float {
+  animation: floatGentle 5s ease-in-out infinite;
+}
