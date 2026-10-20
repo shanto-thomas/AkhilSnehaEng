@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import { EngagementData } from '../data/defaultConfig';
 import { getGoogleCalendarUrl } from '../utils/calendar';
+import coupleImg from '../assets/couple.jpg';
 
 interface ContinuousInvitationProps {
   data: EngagementData;
@@ -123,9 +124,16 @@ export const ContinuousInvitation: React.FC<ContinuousInvitationProps> = ({
         <div className="px-6 py-2 flex justify-center">
           <div className="relative w-full max-w-[280px] sm:max-w-[310px] aspect-[4/3.8] rounded-2xl overflow-hidden shadow-md border-2 border-[#eed4db] bg-[#fff6f8]">
             <img
-              src="/public/assets/aistudio/poppycouple2_9c5c3d87.jpg"
+              src={coupleImg}
+              onError={(e) => {
+                const target = e.currentTarget;
+                if (!target.src.includes('poppycouple2.jpg')) {
+                  target.src = '/poppycouple2.jpg';
+                }
+              }}
               alt="Akhil and Sneha"
               className="w-full h-full object-cover object-top filter saturate-[1.03] contrast-[1.02]"
+              loading="eager"
             />
             {/* Soft inner vignette border */}
             <div className="absolute inset-0 ring-1 ring-inset ring-[#c98e9d]/20 pointer-events-none rounded-2xl"></div>
