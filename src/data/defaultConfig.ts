@@ -40,13 +40,13 @@ export const defaultEngagementData: EngagementData = {
     name: 'Akhil',
     fullName: 'Akhil Mathew',
     parents: 'Mathai M & Molly Mathai',
-    contact: '+91 94474 12345',
+    contact: '+91 89438 43827',
   },
   bride: {
     name: 'Sneha',
     fullName: 'Sneha Sabu',
     parents: 'Sabu Thoppil & Leena Sabu',
-    contact: '+91 94952 67890',
+    contact: '+91 62354 51944',
   },
   event: {
     title: 'Engagement Celebration',
@@ -69,13 +69,13 @@ export const defaultEngagementData: EngagementData = {
       label: 'Groom’s Family',
       name: 'Mathai M (Father)',
       relation: 'Edoor',
-      phone: '+91 94474 12345',
+      phone: '+91 89438 43827',
     },
     {
       label: 'Bride’s Family',
       name: 'Sabu Thoppil (Father)',
       relation: 'Edoor',
-      phone: '+91 94952 67890',
+      phone: '+91 62354 51944',
     },
   ],
 };
