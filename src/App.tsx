@@ -6,16 +6,16 @@
 import { useState } from 'react';
 import { EngagementData, defaultEngagementData } from './data/defaultConfig';
 import { ContinuousInvitation } from './components/ContinuousInvitation';
-import { InvitationLoader } from './components/InvitationLoader';
+import { BlossomLoader } from './components/BlossomLoader';
 
 export default function App() {
   const [data] = useState<EngagementData>(defaultEngagementData);
-  const [showLoader, setShowLoader] = useState(true);
+  const [isInvitationOpen, setIsInvitationOpen] = useState(false);
 
   return (
     <div className="w-full min-h-screen bg-[#fbf5f6]">
-      {showLoader && (
-        <InvitationLoader onOpen={() => setShowLoader(false)} />
+      {!isInvitationOpen && (
+        <BlossomLoader onOpen={() => setIsInvitationOpen(true)} />
       )}
 
       <ContinuousInvitation data={data} />

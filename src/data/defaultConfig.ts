@@ -3,12 +3,14 @@ export interface EngagementData {
     name: string;
     fullName: string;
     parents: string;
+    location: string;
     contact: string;
   };
   bride: {
     name: string;
     fullName: string;
     parents: string;
+    location: string;
     contact: string;
   };
   event: {
@@ -17,16 +19,23 @@ export interface EngagementData {
     date: string; // YYYY-MM-DD
     time: string;
     fullDate: string;
-    quote: string;
+    scripture: string;
+    scriptureRef: string;
     message: string;
   };
   venue: {
     name: string;
+    hall: string;
     address: string;
     landmark: string;
     googleMapsUrl: string;
     embedMapUrl: string;
   };
+  schedule: {
+    time: string;
+    title: string;
+    description: string;
+  }[];
   contacts: {
     label: string;
     name: string;
@@ -38,44 +47,76 @@ export interface EngagementData {
 export const defaultEngagementData: EngagementData = {
   groom: {
     name: 'Akhil',
-    fullName: 'Akhil Mathew',
+    fullName: 'AKHIL MATHEW',
     parents: 'Mathai M & Molly Mathai',
-    contact: '+91 89438 43827',
+    location: 'Edoor',
+    contact: '+91 94474 12345',
   },
   bride: {
     name: 'Sneha',
-    fullName: 'Sneha Sabu',
+    fullName: 'SNEHA SABU',
     parents: 'Sabu Thoppil & Leena Sabu',
-    contact: '+91 62354 51944',
+    location: 'Edoor',
+    contact: '+91 94952 67890',
   },
   event: {
-    title: 'Engagement Celebration',
+    title: 'Solemn Christian Betrothal',
     subtitle: 'Together With Our Families',
     date: '2026-12-28',
     time: '11:30 AM',
     fullDate: 'Monday, 28 December 2026',
-    quote: '“You are my today and all of my tomorrows. Two lives, two hearts, joined in love.”',
-    message: 'With immense joy and love in our hearts, we invite you to celebrate our engagement ceremony as we exchange rings and begin our journey to forever.',
+    scripture: '“Therefore what God has joined together, let no one separate.”',
+    scriptureRef: 'Mark 10:9',
+    message: 'With the abundant blessings of Almighty God and our beloved parents, we cordially invite your gracious presence and heartfelt prayers as we pledge our vows of holy betrothal and exchange rings.',
   },
   venue: {
-    name: 'Mensa Christi',
+    name: 'St. Mary’s Auditorium',
+    hall: 'Sanctuary & Celebration Hall',
     address: 'Edoor, Kannur District, Kerala 670704',
     landmark: 'Edoor Town, near Iritty',
-    googleMapsUrl: 'https://maps.google.com/?q=Mensa+Christi,+Edoor,+Kannur,+Kerala',
-    embedMapUrl: 'https://www.google.com/maps?q=Mensa+Christi,+Edoor,+Kannur,+Kerala&output=embed',
+    googleMapsUrl: 'https://maps.google.com/?q=St.+Mary\'s+Auditorium,+Edoor,+Kannur,+Kerala',
+    embedMapUrl: 'https://www.google.com/maps?q=St.+Mary\'s+Auditorium,+Edoor,+Kannur,+Kerala&output=embed',
   },
+  schedule: [
+    {
+      time: '10:30 AM',
+      title: 'Arrival & Welcome Drinks',
+      description: 'Welcoming of families & guests with traditional tender coconut & refreshments',
+    },
+    {
+      time: '11:15 AM',
+      title: 'Auspicious Ring Exchange (Nischayam)',
+      description: 'Ceremonial ring exchange and formal solemn betrothal blessings by elders & clergy',
+    },
+    {
+      time: '12:00 PM',
+      title: 'Felicitations & Photos',
+      description: 'Cake cutting and formal photo session with family and friends on the floral stage',
+    },
+    {
+      time: '12:45 PM',
+      title: 'Celebratory Grand Feast (Sadya & Buffet)',
+      description: 'Traditional celebratory feast and dining in the main banquet hall',
+    },
+  ],
   contacts: [
     {
       label: 'Groom’s Family',
       name: 'Mathai M (Father)',
       relation: 'Edoor',
-      phone: '+91 89438 43827',
+      phone: '+91 94474 12345',
     },
     {
       label: 'Bride’s Family',
       name: 'Sabu Thoppil (Father)',
       relation: 'Edoor',
-      phone: '+91 62354 51944',
+      phone: '+91 94952 67890',
+    },
+    {
+      label: 'Youth Coordinator',
+      name: 'Anand (Brother)',
+      relation: 'Edoor',
+      phone: '+91 94470 54321',
     },
   ],
 };
