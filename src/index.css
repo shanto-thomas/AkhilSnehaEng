@@ -103,3 +103,82 @@
 .animate-float {
   animation: floatGentle 5s ease-in-out infinite;
 }
+
+/* Blossom Gentle Breathing & Pulsing */
+@keyframes blossomPulse {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  50% {
+    transform: scale(1.07) rotate(3deg);
+  }
+}
+
+.animate-blossom-breathe {
+  animation: blossomPulse 3.5s ease-in-out infinite;
+}
+
+/* Concentric Aura Ripple */
+@keyframes auraRipple {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+
+.animate-aura-ripple-1 {
+  animation: auraRipple 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+}
+
+.animate-aura-ripple-2 {
+  animation: auraRipple 3s cubic-bezier(0.16, 1, 0.3, 1) infinite 1.5s;
+}
+
+/* Cute Venue Pin Bobbing */
+@keyframes pinBob {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+.animate-pin-bob {
+  animation: pinBob 2.5s ease-in-out infinite;
+}
+
+/* Cute Gentle Sway / Floating for Cards */
+@keyframes gentleSway {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-2px) rotate(0.4deg);
+  }
+}
+
+.animate-gentle-sway {
+  animation: gentleSway 4s ease-in-out infinite;
+}
+
+/* Cute Phone Ring Wiggle */
+@keyframes phoneWiggle {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  20%, 60% {
+    transform: rotate(-12deg);
+  }
+  40%, 80% {
+    transform: rotate(12deg);
+  }
+}
+
+.hover-wiggle:hover .phone-icon {
+  animation: phoneWiggle 0.6s ease-in-out;
+}
