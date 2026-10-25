@@ -118,24 +118,107 @@
   animation: blossomPulse 3.5s ease-in-out infinite;
 }
 
-/* Concentric Aura Ripple */
-@keyframes auraRipple {
+/* Highly Visible Radiant Vibration Waves around Flower */
+@keyframes beaconWave {
   0% {
-    transform: scale(0.95);
-    opacity: 0.7;
+    transform: scale(0.92);
+    opacity: 0.9;
+    border-width: 2.5px;
+  }
+  50% {
+    opacity: 0.55;
   }
   100% {
-    transform: scale(1.5);
+    transform: scale(1.75);
     opacity: 0;
+    border-width: 1px;
   }
 }
 
-.animate-aura-ripple-1 {
-  animation: auraRipple 3s cubic-bezier(0.16, 1, 0.3, 1) infinite;
+.animate-beacon-1 {
+  animation: beaconWave 2.4s cubic-bezier(0, 0.4, 0.6, 1) infinite;
 }
 
-.animate-aura-ripple-2 {
-  animation: auraRipple 3s cubic-bezier(0.16, 1, 0.3, 1) infinite 1.5s;
+.animate-beacon-2 {
+  animation: beaconWave 2.4s cubic-bezier(0, 0.4, 0.6, 1) infinite 0.8s;
+}
+
+.animate-beacon-3 {
+  animation: beaconWave 2.4s cubic-bezier(0, 0.4, 0.6, 1) infinite 1.6s;
+}
+
+/* Rhythmic Heartbeat Vibration for Flower Medallion */
+@keyframes flowerHeartbeat {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+  }
+  15% {
+    transform: scale(1.08) rotate(2deg);
+  }
+  28% {
+    transform: scale(0.98) rotate(-1deg);
+  }
+  42% {
+    transform: scale(1.05) rotate(1deg);
+  }
+  55% {
+    transform: scale(1) rotate(0deg);
+  }
+}
+
+.animate-flower-heartbeat {
+  animation: flowerHeartbeat 2.4s ease-in-out infinite;
+}
+
+/* Twinkling Orbit Sparkle */
+@keyframes orbitSpin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-orbit {
+  animation: orbitSpin 10s linear infinite;
+}
+
+/* Cute Honey Bee Hovering & Buzzing Flight */
+@keyframes beeHover {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+  25% {
+    transform: translate(6px, -7px) rotate(8deg);
+  }
+  50% {
+    transform: translate(-4px, -11px) rotate(-5deg);
+  }
+  75% {
+    transform: translate(-7px, -4px) rotate(-8deg);
+  }
+  100% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+}
+
+.animate-bee-hover {
+  animation: beeHover 3.2s ease-in-out infinite;
+}
+
+/* Cute Pointer Tap Bounce */
+@keyframes tapBounce {
+  0%, 100% {
+    transform: translateY(0px) rotate(-12deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(-18deg);
+  }
+}
+
+.animate-tap-bounce {
+  animation: tapBounce 1.2s ease-in-out infinite;
 }
 
 /* Cute Venue Pin Bobbing */
